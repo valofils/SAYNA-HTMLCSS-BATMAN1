@@ -1,15 +1,26 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
 /****** Body********************************************** */
 body {
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 body p {
     color:white;
-    font-size: 13px; 
+    font-size: 15px; 
     text-align: justify;
     padding-right: 100px;
 }
@@ -45,6 +56,11 @@ h2 {
     background-image: url("Assets/Illustrations/Bathome1.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     }
 
 header {
@@ -85,9 +101,8 @@ header a.active::after {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    height: 100vh; /* prend toute la hauteur de la fenêtre */
-    /*border: 5px solid rgba(255, 255, 255, 0.1);*/
     border-bottom: none;
+    height:100%;
 }
 
 .colonne-gauche {
@@ -126,7 +141,7 @@ header a.active::after {
     text-decoration: none;      /* enlève le soulignement */
     display: inline-block;      /* permet de créer un rectangle autour */
     width: 150px;            /* largeur fixe */
-    height: 15px;            /* hauteur fixe */
+    height: 30px;            /* hauteur fixe */
     text-align: center;        /* centre le texte */
     font-size: 13px; 
 }
@@ -176,20 +191,19 @@ header a.active::after {
 
 
 /******** Page 2 *****************************************/ 
-.page2{
-  padding:40px;
-  /*border-left: 5px solid rgba(255, 255, 255, 0.1);
-  border-right: 5px solid rgba(255, 255, 255, 0.1);*/
-}
 
 #heros p, #adversaire p, #heros2 p {
     text-align: justify;
+
 }
 .grille {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, auto);   
-    gap: 30px;                             
+    gap: 20px;  
+    text-align: center;
+    align-items: center;  
+    justify-items: center;                         
 }
 
 .grille img {
@@ -207,17 +221,35 @@ header a.active::after {
   border-radius:5px;
 }
 
-.bloc2 {
-    text-align: center;
-    /*height:80px;*/
+.bloc1 img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #BCBBBD;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-.Bathome12{
-    width: 300px;  
-    height: 300px; 
-    padding-left:75% ;
+.bloc2 h2 {
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
 }
 
+.batman-droit-container {
+  position: relative;
+  height: 0; /* empêche de prendre de la place visuelle */
+}
+
+.batman-droit {
+  position: absolute;
+  bottom: -50px; /* Ajuste selon ce que tu veux */
+  right: 0;
+  width: 280px;
+  height: auto;
+  z-index: 2;
+}
 
 .Bathome13{
     width: 100px;  
@@ -244,11 +276,6 @@ header a.active::after {
 
 /*  Page 3 ******* ****************************************/
 
-.page3{
-  /*padding:40px;*/
-  /*border-left: 5px solid rgba(255, 255, 255, 0.1);
-  border-right: 5px solid rgba(255, 255, 255, 0.1);*/
-}
 
 .multimedia-container {
   display: flex;
@@ -268,24 +295,34 @@ header a.active::after {
 .carte {
   display: flex;
   background: linear-gradient(to right, #1e1e1e, #2a2a2a);
-  border-radius: 2px;
+  border-radius: 20px;
   overflow: hidden;
+  min-height: 260px;
+  height: auto;
   width: 700px;
-  height: 300px;
+  height: auto;
 }
 
 .affiche {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  min-height: 260px;
+  height: auto;
   object-fit: cover;
 }
 
 .multimedia-texte {
-  padding: 20px;
+  padding-left: 20px;
   color: white;
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
+
+.multimedia-texte p,
+.multimedia-texte h2 {
+  margin: 0; /* Supprime les marges par défaut */
+}
+
 
 .multimedia-texte .genre {
   font-weight: bold;
@@ -307,9 +344,10 @@ header a.active::after {
 
 .multimedia-texte .description {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.3;
   text-align: justify;
 }
+
 
 .bande_annonce {
     width: 100%;
@@ -369,7 +407,7 @@ header a.active::after {
     text-decoration: none;      /* enlève le soulignement */
     display: inline-block;      /* permet de créer un rectangle autour */
     width: 150px;            /* largeur fixe */
-    height: 15px;            /* hauteur fixe */
+    height: 30px;            /* hauteur fixe */
     text-align: center;        /* centre le texte */
     font-size: 13px; 
     align-self: center;
@@ -382,31 +420,46 @@ header a.active::after {
 }
 
 .quotes {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: row;
-  gap:20px;
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 300px; /* Assure un espace pour voir les guillemets */
 }
 
-blockquote {
+.quotes blockquote {
   color: white;
   font-style: italic;
-  padding-top: 40px;
-  padding-left: 50px;
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin: auto;
 }
 
 
-.guillemets1 , .guillemets2 {
-  height:60px;
-  width:80px;
+.guillemets1, .guillemets2 {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  z-index: 0;
+  filter: grayscale(1) brightness(1.2) contrast(1.2) sepia(0.2) hue-rotate(-30deg) saturate(2);
+  opacity: 0.25;
+  mix-blend-mode: lighten;
+}
+
+
+.guillemets1 {
+  top: 50px;
+  left: 0;
 }
 
 .guillemets2 {
-  padding-top: 140px;
+  bottom: 50px;
+  right: 25%;
 }
+
 /******************************************************** */
 
 
