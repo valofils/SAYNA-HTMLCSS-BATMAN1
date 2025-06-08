@@ -346,6 +346,11 @@ header a.active::after {
   transition: border-color 0.3s;
 }
 
+#frequence option {
+  background-color: black; /* ou rgba(0, 0, 0, 0.8) */
+  color: white;
+}
+
 .champ-souligne {
   background: transparent;         /* fond transparent */
   border: none;                    /* aucune bordure autour */

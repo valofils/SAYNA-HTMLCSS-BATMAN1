@@ -7,42 +7,6 @@
         <link rel="stylesheet" href="index_style.css">
     </head>
 
-    <script>
-        let selectedTheme = "";
-
-        // Sélection de la thématique (boutons)
-        document.querySelectorAll(".choix").forEach(btn => {
-            btn.addEventListener("click", function () {
-            selectedTheme = this.dataset.theme;
-            document.querySelectorAll(".choix").forEach(b => b.classList.remove("selected"));
-            this.classList.add("selected");
-            });
-        });
-
-        // Bouton confirmer
-        document.getElementById("confirmer").addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const email = document.getElementById("email").value.trim();
-            const frequence = document.getElementById("frequence").value;
-            const checkbox = document.getElementById("accept").checked;
-
-            if (!email || !frequence || !checkbox || !selectedTheme) {
-            alert("Veuillez remplir tous les champs et accepter les conditions.");
-            return;
-            }
-
-            // Afficher le popup
-            document.getElementById("popup").classList.remove("hidden");
-            document.getElementById("popup").classList.add("show");
-
-            // Disparaît après 3 secondes
-            setTimeout(() => {
-            document.getElementById("popup").classList.remove("show");
-            document.getElementById("popup").classList.add("hidden");
-            }, 3000);
-        });
-    </script>
 
     <body>
 
@@ -251,7 +215,7 @@
                             <div class="contact_info">
 
                                 <h2>Adresse email</h2>
-                                <input type="text" id="email" class="champ-souligne" value="Adresse email">
+                                <input type="text" id="email" class="champ-souligne" placeholder="Adresse email">
 
                                 <h2>NEWSLETTER</h2>
                                 <label>
@@ -271,9 +235,9 @@
 
                                 <!-- Thématique de newsletter -->
                                 <div class="bouton_home">
-                                    <a class="encadre" data-theme="films" >Des films</a>
-                                    <a class="encadre" data-theme="comics">Des comics</a>
-                                    <a class="encadre" data-theme="tout" >De tout</a>
+                                    <a class="encadre choix" data-theme="films" >Des films</a>
+                                    <a class="encadre choix" data-theme="comics">Des comics</a>
+                                    <a class="encadre choix" data-theme="tout" >De tout</a>
                                 </div>   
                                 <!-- Message -->
                                 <h2>Message</h2>
@@ -346,5 +310,43 @@
         </div>
 
     </body>
+
+    <script>
+        let selectedTheme = "";
+
+        // Sélection de la thématique (boutons)
+        document.querySelectorAll(".choix").forEach(btn => {
+            btn.addEventListener("click", function () {
+            selectedTheme = this.dataset.theme;
+            document.querySelectorAll(".choix").forEach(b => b.classList.remove("selected"));
+            this.classList.add("selected");
+            });
+        });
+
+        // Bouton confirmer
+        document.getElementById("confirmer").addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const frequence = document.getElementById("frequence").value;
+            const checkbox = document.getElementById("accept").checked;
+
+            if (!email || !frequence || !checkbox || !selectedTheme) {
+            alert("Veuillez remplir tous les champs et accepter les conditions.");
+            return;
+            }
+
+            // Afficher le popup
+            document.getElementById("popup").classList.remove("hidden");
+            document.getElementById("popup").classList.add("show");
+
+            // Disparaît après 3 secondes
+            setTimeout(() => {
+            document.getElementById("popup").classList.remove("show");
+            document.getElementById("popup").classList.add("hidden");
+            }, 3000);
+        });
+    </script>
+
 
 </html>
