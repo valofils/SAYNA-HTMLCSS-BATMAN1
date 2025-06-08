@@ -151,7 +151,7 @@ header a.active::after {
     display: flex;
     align-items: center;
     float: right;
-    width:10px;
+    width:20px;
     margin-right: 0px;
     padding-right: 0px;
 }
@@ -196,6 +196,11 @@ header a.active::after {
     text-align: justify;
 
 }
+
+#heros h1, #adversaire h1, #heros2 h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .grille {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -203,7 +208,8 @@ header a.active::after {
     gap: 20px;  
     text-align: center;
     align-items: center;  
-    justify-items: center;                         
+    justify-items: center;   
+    padding-top: 20px;                      
 }
 
 .grille img {
@@ -282,6 +288,7 @@ header a.active::after {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  padding-top: 20px;
 }
 
 .fleche_gauche, .fleche_droite {
@@ -316,6 +323,7 @@ header a.active::after {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding-top: 40px;
 }
 
 .multimedia-texte p,
