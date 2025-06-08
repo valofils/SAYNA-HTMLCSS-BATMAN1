@@ -1,0 +1,531 @@
+
+/****** Body********************************************** */
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body p {
+    color:white;
+    font-size: 13px; 
+    text-align: justify;
+    padding-right: 100px;
+}
+
+img {
+    height: 20px;  
+    width : 40px;              
+}
+
+h1{
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+.conteneur-global {
+  padding-left: 102px;
+  padding-right: 102px;
+  border-left: 1px solid #BCBBBD;
+  border-right: 1px solid #BCBBBD;
+  box-sizing: border-box;
+}
+
+
+/******** ********************************************** */
+
+
+/***Page 1 ********************************************** */
+
+.page1{
+    background-image: url("Assets/Illustrations/Bathome1.png");
+    background-position: center;
+    background-size: cover;
+    }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 132px;
+  border-bottom: 1px solid #BCBBBD;
+  padding-left: 102px;
+  padding-right: 102px;
+  box-sizing: border-box;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  position: relative;
+}
+
+header a:hover,
+header a.active {
+  font-weight: bold;
+}
+
+header a:hover::after,
+header a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+
+.main_contenu {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100vh; /* prend toute la hauteur de la fenêtre */
+    /*border: 5px solid rgba(255, 255, 255, 0.1);*/
+    border-bottom: none;
+}
+
+.colonne-gauche {
+    display: flex;
+    flex-direction: column; /* pour empiler les deux lignes */
+    flex: 1;                /* prend 50% de la largeur */
+}
+
+.intro {
+    flex-direction:column;
+}
+
+.intro p {
+    align-items: center;
+    text-align: center;
+}
+
+.intro, .bouton_home {
+    flex: 1;                /* chaque ligne prend 50% de la hauteur de la colonne */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bouton_home {
+    display: flex;
+    justify-content: start;     /* aligne à gauche (ou space-between, center, etc.) */
+    gap: 20px;                  /* espace entre les éléments */
+    padding: 20px;
+}
+
+.encadre {
+    background-color: rgba(255, 255, 255, 0.2); /* blanc à 50 % d’opacité */
+    color: white;               /* texte noir pour le contraste */
+    padding: 8px;          /* espace autour du texte */
+    text-decoration: none;      /* enlève le soulignement */
+    display: inline-block;      /* permet de créer un rectangle autour */
+    width: 150px;            /* largeur fixe */
+    height: 15px;            /* hauteur fixe */
+    text-align: center;        /* centre le texte */
+    font-size: 13px; 
+}
+
+.logo_home {
+    flex-direction: column;     /* aligne en colonne */           
+    display: flex;
+    align-items: center;
+    float: right;
+    width:10px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.reseaux_sociaux img {
+    height: 10px;  
+    width : 10px; 
+    align-items: center;
+}
+/******** ******* *****************************************/ 
+
+
+
+
+/******** Flèche down**************************************/ 
+
+.fleche_down{
+    /*border: 5px solid rgba(255, 255, 255, 0.1);*/
+    border-bottom: none;
+    border-top: none;
+    align-items: center;
+    margin:0;
+    padding-left: 50%;
+    padding-top: 60px;
+    padding-bottom: 0px;
+}
+
+.fleche_down img {
+    height: 50px;  
+    width : 100px; 
+    align-items: center;
+}
+/******** ******* *****************************************/ 
+
+
+
+
+
+/******** Page 2 *****************************************/ 
+.page2{
+  padding:40px;
+  /*border-left: 5px solid rgba(255, 255, 255, 0.1);
+  border-right: 5px solid rgba(255, 255, 255, 0.1);*/
+}
+
+#heros p, #adversaire p, #heros2 p {
+    text-align: justify;
+}
+.grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto);   
+    gap: 30px;                             
+}
+
+.grille img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+.grille p {
+    text-align: center; 
+}
+
+.bloc1 {
+  border-color: linear-gradient(to right, rgba(237, 222, 191, 0.4), rgba(25, 88, 125, 0.4));
+  border-radius:5px;
+}
+
+.bloc2 {
+    text-align: center;
+    /*height:80px;*/
+}
+
+.Bathome12{
+    width: 300px;  
+    height: 300px; 
+    padding-left:75% ;
+}
+
+
+.Bathome13{
+    width: 100px;  
+    height: 100px; 
+    margin-left: 0%;
+}
+
+
+/*  Justice League ****************************************/
+
+.justice_league img {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width:100%;
+  height:100%;
+}
+/*  Justice League ****************************************/
+
+
+
+/*  Page 3 ******* ****************************************/
+
+.page3{
+  /*padding:40px;*/
+  /*border-left: 5px solid rgba(255, 255, 255, 0.1);
+  border-right: 5px solid rgba(255, 255, 255, 0.1);*/
+}
+
+.multimedia-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.fleche_gauche, .fleche_droite {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.carte {
+  display: flex;
+  background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+  border-radius: 2px;
+  overflow: hidden;
+  width: 700px;
+  height: 300px;
+}
+
+.affiche {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.multimedia-texte {
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.multimedia-texte .genre {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ccc;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.multimedia-texte h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.multimedia-texte .note {
+  color: #e4c860; /* couleur dorée comme sur IMDb */
+  font-weight: bold;
+}
+
+.multimedia-texte .description {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.bande_annonce {
+    width: 100%;
+    height: 100%;
+    padding-top:100px;
+    padding-bottom: 100px;
+    /*padding-left: 100px;*/
+    padding-right: 100px;
+}
+
+.contact {
+  background: linear-gradient(to right, rgba(237, 222, 191, 0.4), rgba(25, 88, 125, 0.4));
+}
+
+.contact h1 {
+  padding-left: 35%;
+}
+
+.contact_info{
+    padding-left: 20%;
+    padding-right: 20%;
+    gap: 40px;
+}
+
+#frequence {
+  background: transparent;         /* fond transparent */
+  border: none;                    /* aucune bordure autour */
+  border-bottom: 2px solid white;  /* juste une ligne en bas */
+  color: white;                    /* texte en blanc */
+  font-size: 16px;
+  padding: 8px 4px;
+  width: 100%;
+  outline: none;                   /* supprime le contour bleu au focus */
+  transition: border-color 0.3s;
+}
+
+.champ-souligne {
+  background: transparent;         /* fond transparent */
+  border: none;                    /* aucune bordure autour */
+  border-bottom: 2px solid white;  /* juste une ligne en bas */
+  color: white;                    /* texte en blanc */
+  font-size: 16px;
+  padding: 8px 4px;
+  width: 100%;
+  outline: none;                   /* supprime le contour bleu au focus */
+  transition: border-color 0.3s;
+}
+
+.confirmer{
+    background: linear-gradient(to right,rgba(237, 222, 191, 0.4),rgba(137, 0, 8, 0.6));    color: white;               /* texte noir pour le contraste */
+    padding: 8px;          /* espace autour du texte */
+    text-decoration: none;      /* enlève le soulignement */
+    display: inline-block;      /* permet de créer un rectangle autour */
+    width: 150px;            /* largeur fixe */
+    height: 15px;            /* hauteur fixe */
+    text-align: center;        /* centre le texte */
+    font-size: 13px; 
+    align-self: center;
+}
+
+.confirmer_div {
+  padding-left: 35%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.quotes {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+}
+
+blockquote {
+  color: white;
+  font-style: italic;
+  padding-top: 40px;
+  padding-left: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+
+.guillemets1 , .guillemets2 {
+  height:60px;
+  width:80px;
+}
+
+.guillemets2 {
+  padding-top: 140px;
+}
+/******************************************************** */
+
+
+/******** Footer *****************************************/
+
+footer{
+  align-items: center;
+  padding-left: 35%;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.icon_WB img {
+  width: 30px;
+  height: 40px;
+}
+
+.logo_footer {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  align-items: center;
+  padding-left:20%;
+}
+
+/******************************************************** */
+
+
+
+/**** animations  *************************************************** */
+
+/** Effet hover sur les boutons : Passer l’opacité du fond de 40% à 100% au survol*/
+.encadre, .confirmer {
+  transition: background 0.3s ease;
+}
+
+.encadre:hover, .confirmer:hover {
+  background: linear-gradient(to right, rgba(237, 222, 191, 1), rgba(137, 0, 8, 1)); /* 100% opaque */
+}
+
+/*Effet hover sur les logos réseaux sociaux et Batman
+Le logo passe en jaune Batman (par ex : #FFD700)*/ 
+
+.logo_home img,
+.logo_footer img,
+.reseaux_sociaux img {
+  filter: grayscale(1);
+  transition: filter 0.3s, filter 0.3s;
+}
+
+.logo_home img:hover,
+.logo_footer img:hover,
+.reseaux_sociaux img:hover {
+  filter: grayscale(0) brightness(1.2) sepia(1) hue-rotate(-50deg) saturate(5); /* effet jaune */
+}
+
+/* Zoom léger sur les cartes de personnagese : .bloc1 (déjà défini dans .grille)*/
+
+.bloc1 {
+  transition: transform 0.3s ease;
+}
+
+.bloc1:hover {
+  transform: scale(1.1);
+}
+
+/*Fade in from left pour les éléments
+Tous les titres, textes, images apparaissent avec un mouvement de gauche à droite*/
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.body h1, .body h2,.body p, .body img, .body .encadre, .body .confirmer {
+  animation: fadeInLeft 1s ease-out forwards;
+  opacity: 0; /* au départ */
+}
+
+/**Icônes Batman scrollables + ancre haut/bas  */
+.logo_home {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+/**CSS pour le popup */
+.popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  color: white;
+  padding: 30px 50px;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  z-index: 999;
+  display: none;
+  text-align: center;
+}
+
+.popup.show {
+  display: block;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.choix.selected {
+  background: linear-gradient(to right, rgba(237, 222, 191, 1), rgba(137, 0, 8, 1));
+}
